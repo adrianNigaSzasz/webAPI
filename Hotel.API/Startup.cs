@@ -44,12 +44,16 @@ namespace Hotel.API
 		{
 			if (env.IsDevelopment())
 			{
-				app.UseDeveloperExceptionPage();
+				app.UseExceptionHandler("/error-development");
 
 				app.UseSwagger();
 
 				app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotels API V1"); });
 
+			}
+			else
+			{
+				app.UseExceptionHandler("/error");
 			}
 
 			app.UseHttpsRedirection();
