@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.Data", "Hotel.Data\Ho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.Models", "Hotel.Models\Hotel.Models.csproj", "{5EB3D638-96ED-4AA4-B43F-A35BEED63448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{393BC5F2-6041-45D5-B6CF-B211F9AC5D6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{5EB3D638-96ED-4AA4-B43F-A35BEED63448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5EB3D638-96ED-4AA4-B43F-A35BEED63448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5EB3D638-96ED-4AA4-B43F-A35BEED63448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{393BC5F2-6041-45D5-B6CF-B211F9AC5D6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393BC5F2-6041-45D5-B6CF-B211F9AC5D6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393BC5F2-6041-45D5-B6CF-B211F9AC5D6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393BC5F2-6041-45D5-B6CF-B211F9AC5D6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
