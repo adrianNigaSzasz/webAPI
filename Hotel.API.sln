@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horel.API", "Horel.API\Horel.API.csproj", "{1F260D6F-771B-4887-9F9C-FB340919D5B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.API", "Hotel.API\Hotel.API.csproj", "{1F260D6F-771B-4887-9F9C-FB340919D5B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EB3D638-96ED-4AA4-B43F-A35BEED63448} = {5EB3D638-96ED-4AA4-B43F-A35BEED63448}
+		{45A741B4-6F4B-4494-B357-D202F24E609F} = {45A741B4-6F4B-4494-B357-D202F24E609F}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Data", "Hotel.Data\Hotel.Data.csproj", "{45A741B4-6F4B-4494-B357-D202F24E609F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.Data", "Hotel.Data\Hotel.Data.csproj", "{45A741B4-6F4B-4494-B357-D202F24E609F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hotel.Models", "Hotel.Models\Hotel.Models.csproj", "{5EB3D638-96ED-4AA4-B43F-A35BEED63448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hotel.Models", "Hotel.Models\Hotel.Models.csproj", "{5EB3D638-96ED-4AA4-B43F-A35BEED63448}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
