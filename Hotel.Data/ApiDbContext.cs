@@ -22,7 +22,7 @@ namespace Hotel.Data
 
 
 
-		public DbSet<Hotel.Data.Entities.Hotel> Hotels { get; set; }
+		public DbSet<Entities.Hotel> Hotels { get; set; }
 
 		public DbSet<Room> Rooms { get; set; }
 

@@ -10,8 +10,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Hotel.Data;
+using Microsoft.OpenApi.Models;
+using Hotel.API.Middleware;
+using Hotel.API.Services;
 
-namespace Horel.API
+namespace Hotel.API
 {
 	public class Startup
 	{
@@ -25,7 +30,13 @@ namespace Horel.API
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddDbContext<ApiDbContext>(options=> options.UseSqlServer(this.Configuration.GetConnectionString("DefaultConnection")));
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new OpenApiInfo { Title = "Hotels API", Version = "v1" });
+			});
 			services.AddControllers();
+			services.AddScoped<INotificationService, NotificationServices>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +45,11 @@ namespace Horel.API
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
+
+				app.UseSwagger();
+
+				app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Hotels API V1"); });
+
 			}
 
 			app.UseHttpsRedirection();
@@ -41,6 +57,8 @@ namespace Horel.API
 			app.UseRouting();
 
 			app.UseAuthorization();
+
+			app.UseMiddleware<Middleware.Middleware>();
 
 			app.UseEndpoints(endpoints =>
 			{
